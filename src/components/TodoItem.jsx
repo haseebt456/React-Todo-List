@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function TodoItem({todo,onDelete}) {//todo = props.todo
+export default function TodoItem({todo,onDelete}) {//todo = props.todo - destructuring props
   return (
     <div>
         <h4>{todo.title}</h4>
