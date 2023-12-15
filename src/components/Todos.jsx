@@ -4,8 +4,11 @@ import TodoItem from "./TodoItem";
 export default function Todos(props) {
   return (
   <div className="container">
-    <h3>Todos</h3>
-    <TodoItem todo={props.todoslist[0]}/>
+    <h3 className="text-center my-3">Todos</h3>
+    {props.todoslist.map((todo)=>{
+      return <TodoItem todo={todo}/> 
+    })}
+    
   </div>
   )
 }
