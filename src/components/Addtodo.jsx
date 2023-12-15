@@ -2,22 +2,19 @@ import React from 'react'
 
 export default function Addtodo() {
     return (
-        <div className='conatiner'>
+        <div className='container'>
+            <h3>Add Todo</h3>
             <form>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="description" aria-describedby="emailHelp" />
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" />
+                    <label for="description" class="form-label">Description</label>
+                    <input type="text" class="form-control" id="description" />
                 </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                
+                <button type="submit" class="btn btn-success">Add todo</button>
             </form>
         </div>
     )
