@@ -5,8 +5,8 @@ import Footer from "./components/footer";
 
 function App() {
 
-  const onDelete = ()=>{
-    console.log("I am on delete")
+  const onDelete = (todo)=>{
+    console.log("I am on delete",todo)
   }
   let todosArray = [
     {
@@ -21,8 +21,8 @@ function App() {
     },
     {
       sno: 3,
-      title: "complete your university",
-      desc: "You should go to university everyday to learn"
+      title: "complete your Assignments",
+      desc: "You should go to complete your assignments by tomorrow"
     }
   ]
   return (
