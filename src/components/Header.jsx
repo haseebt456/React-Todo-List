@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from 'prop-types'
 //props are javascrpt oject passed from parent component
 export default function Header(props) {
   return (
@@ -50,4 +50,9 @@ export default function Header(props) {
       </nav>
     </>
   )
+}
+
+//default props
+Header.propTypes = {
+    title: PropTypes.string//define title prototype to be string advantage is that when another type of prop is passed it gives warning but still show prop value
 }
