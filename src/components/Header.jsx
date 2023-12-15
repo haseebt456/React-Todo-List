@@ -1,12 +1,13 @@
 import React from 'react'
 
-export default function Header() {
+//props are javascrpt oject passed from parent component
+export default function Header(props) {
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            Todos List
+            {props.title}
           </a>
           <button
             className="navbar-toggler"
@@ -32,6 +33,7 @@ export default function Header() {
                 </a>
               </li>
             </ul>
+            {props.searchBar? 
             <form className="d-flex" role="search">
               <input
                 className="form-control me-2"
@@ -42,7 +44,7 @@ export default function Header() {
               <button className="btn btn-outline-success" type="submit">
                 Search
               </button>
-            </form>
+            </form>: ""}
           </div>
         </div>
       </nav>
