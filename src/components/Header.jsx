@@ -52,7 +52,10 @@ export default function Header(props) {
   )
 }
 
-//default props
+//Default props 
+Header.defaultProps = {
+    title: "Default title"
+}
 Header.propTypes = {
     title: PropTypes.string//define title prototype to be string advantage is that when another type of prop is passed it gives warning but still show prop value
 }
