@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Todos from "./components/Todos";
 import Footer from "./components/footer";
 import React, {useState} from "react";
-
+import Addtodo from "./components/Addtodo";
 function App() {
 
   const onDelete = (todo)=>{
@@ -43,6 +43,7 @@ In React, when you want to modify the state, you use the corresponding setter fu
   return (
     <>
       <Header title="My Todos list" serchBar={false} />
+      <Addtodo/>
       <Todos todoslist = {todosArray} onDelete={onDelete}/>
       <Footer />
     </>
