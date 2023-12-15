@@ -4,6 +4,10 @@ import Todos from "./components/Todos";
 import Footer from "./components/footer";
 
 function App() {
+
+  const onDelete = ()=>{
+    console.log("I am on delete")
+  }
   let todosArray = [
     {
       sno: 1,
@@ -24,7 +28,7 @@ function App() {
   return (
     <>
       <Header title="My Todos list" serchBar={false} />
-      <Todos todoslist = {todosArray} />
+      <Todos todoslist = {todosArray} onDelete={onDelete}/>
       <Footer />
     </>
   );
