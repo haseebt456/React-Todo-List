@@ -6,7 +6,10 @@ import Footer from "./components/footer";
 function App() {
 
   const onDelete = (todo)=>{
-    console.log("I am on delete",todo)
+    console.log("I am on delete",todo);
+    
+    let index = todosArray.indexOf(todo);
+    todosArray.splice(index,1);
   }
   let todosArray = [
     {
