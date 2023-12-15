@@ -4,7 +4,7 @@ import Todos from "./components/Todos";
 import Footer from "./components/footer";
 
 function App() {
-  let todos = [
+  let todosArray = [
     {
       sno: 1,
       title: "Go to the university",
@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <Header title="My Todos list" serchBar={false} />
-      <Todos todoslist = {todos} />
+      <Todos todoslist = {todosArray} />
       <Footer />
     </>
   );
