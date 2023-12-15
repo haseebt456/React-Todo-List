@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Todos = () => {
+export default function Todos() {
   return (
     <div>Todos works</div>
   )
