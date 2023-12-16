@@ -17,6 +17,16 @@ function App() {
     }))
   }
 
+  const addTodo = (title,desc)=>{
+    let sno = todosArray.length+1;
+    const myTodo = {
+      sno:sno,
+      title: title,
+      desc: desc
+    }
+    setTodos([...todosArray,myTodo]);
+  }
+
  /*  todosArray: This is the state variable that holds the current state of your to-do items. It is initialized with an array of three to-do items, each represented by an object.
 
 setTodos: This is the function that you can use to update the todosArray state. 
