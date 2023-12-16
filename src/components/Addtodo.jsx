@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 
 export default function Addtodo() {
+    /* const [title, setTitle] = useState("");: 
+    This line declares a state variable named title and a function to update its value named setTitle.
+     The initial value of title is an empty string (""). */
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
 
