@@ -18,16 +18,16 @@ export default function Addtodo({addTodo}) {
         <div className='container'>
             <h3>Add Todo</h3>
             <form onSubmit={submit}>
-                <div class="mb-3">
-                    <label for="title" class="form-label">Title</label>
-                    <input type="text" value={title} onChange={(e)=>{setTitle(e.target.value)}} class="form-control" id="description" aria-describedby="emailHelp" />
+                <div className="mb-3">
+                    <label htmlFor="title" className="form-label">Title</label>
+                    <input type="text" value={title} onChange={(e)=>{setTitle(e.target.value)}} className="form-control" id="description" aria-describedby="emailHelp" />
                 </div>
-                <div class="mb-3">
-                    <label for="description" class="form-label">Description</label>
-                    <input type="text" value={desc} onChange={(e)=>{setDesc(e.target.value)}}class="form-control" id="desc" />
+                <div className="mb-3">
+                    <label htmlFor="description" className="form-label">Description</label>
+                    <input type="text" value={desc} onChange={(e)=>{setDesc(e.target.value)}}className="form-control" id="desc" />
                 </div>
                 
-                <button type="submit" class="btn btn-success">Add todo</button>
+                <button type="submit" className="btn btn-success">Add todo</button>
             </form>
         </div>
     )
