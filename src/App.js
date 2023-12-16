@@ -43,7 +43,7 @@ In React, when you want to modify the state, you use the corresponding setter fu
   return (
     <>
       <Header title="My Todos list" serchBar={false} />
-      <Addtodo/>
+      <Addtodo addTodo={addTodo}/>
       <Todos todoslist = {todosArray} onDelete={onDelete}/>
       <Footer />
     </>
