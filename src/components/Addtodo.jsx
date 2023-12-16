@@ -13,6 +13,8 @@ export default function Addtodo({addTodo}) {
             alert("Title or Description cannot be blank")
         }
         addTodo(title,desc);
+        setTitle("");
+        setDesc("");
     }
     return (
         <div className='container'>
