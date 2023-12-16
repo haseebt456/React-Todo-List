@@ -2,8 +2,9 @@ import "./App.css";
 import Header from "./components/Header";
 import Todos from "./components/Todos";
 import Footer from "./components/footer";
-import React, {useState} from "react";
+import React, {useState,useEffect} from "react";
 import Addtodo from "./components/Addtodo";
+
 function App() {
   let initTodo;
   if(localStorage.getItem('todos')===null)
@@ -22,7 +23,6 @@ function App() {
     setTodos(todosArray.filter((elementToKeepInNewArray)=>{
       return elementToKeepInNewArray !==todo;
     }));
-    localStorage.setItem('todos',JSON.stringify(todosArray));
   }
 
   const addTodo = (title,desc)=>{
@@ -33,7 +33,6 @@ function App() {
       desc: desc
     }
     setTodos([...todosArray,myTodo]);
-    localStorage.setItem('todos',JSON.stringify(todosArray));
   }
 
  /*  todosArray: This is the state variable that holds the current state of your to-do items. It is initialized with an array of three to-do items, each represented by an object.
@@ -43,6 +42,10 @@ In React, when you want to modify the state, you use the corresponding setter fu
  In this case, setTodos would be used to update the todosArray state. */
  
   const [todosArray, setTodos]= useState(initTodo);
+  useEffect(()=>{
+    localStorage.setItem("todos",JSON.stringify(todosArray));
+  },[todosArray]);
+
   return (
     <>
       <Header title="My Todos list" serchBar={false} />
